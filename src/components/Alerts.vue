@@ -1,0 +1,25 @@
+<script setup></script>
+
+<template>
+  <div>
+    <div class="alerts">
+      <p>
+        <span><i class="bi bi-info-circle"></i></span> Our Webpage is our source
+        of information in tech.
+      </p>
+    </div>
+  </div>
+</template>
+
+<style>
+.alerts {
+  padding: 10px;
+  background-color: #1595e3;
+}
+
+.alerts p {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+</style>
