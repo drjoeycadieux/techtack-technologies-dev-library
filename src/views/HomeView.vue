@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.vue";
 import Boxes from "../components/Boxes.vue";
 import Alerts from "../components/Alerts.vue";
-// import FooterModule from "../components/FooterModule.vue";
+import FooterModule from "../components/FooterModule.vue";
 </script>
 
 <template>
@@ -42,7 +42,7 @@ import Alerts from "../components/Alerts.vue";
       <br />
       <Boxes />
     </div>
-    <!-- <FooterModule /> -->
+    <FooterModule />
   </div>
 </template>
 

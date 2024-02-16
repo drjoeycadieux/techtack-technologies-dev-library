@@ -12,8 +12,8 @@ export default {
   <div>
     <div class="footer">
       <p>
-        &copy; Copytight 2020 - {{ currentYear() }} TeamLitho Company. All Right
-        Reserved
+        &copy; Copytight 2020 - {{ currentYear }} TeamLitho Company. All Right
+        Reserved. <a href="#">Terms of Services</a> | <a href="#">Privacy</a>
       </p>
     </div>
   </div>
@@ -27,9 +27,17 @@ export default {
 
 .footer p {
   color: white;
-  font-weight: bold;
   font-size: 20px;
   font-family: sans-serif;
   text-align: center;
+}
+
+.footer p a {
+  color: lightgray;
+  font-family: sans-serif;
+}
+
+.footer p a:hover {
+  color: white;
 }
 </style>
