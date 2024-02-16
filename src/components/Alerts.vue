@@ -4,8 +4,8 @@
   <div>
     <div class="alerts">
       <p>
-        <span><i class="bi bi-info-circle"></i></span> Our Webpage is our source
-        of information in tech.
+        <span><i style="font-size: 22px" class="bi bi-info-circle"></i></span>
+        Our Webpage is our source of information in tech.
       </p>
     </div>
   </div>
