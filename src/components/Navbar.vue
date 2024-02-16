@@ -3,7 +3,7 @@
 <template>
   <div class="navbar-menu">
     <ul>
-      <p class="title">TeamLitho</p>
+      <p class="title">Techtack-Technoogies Dev Library</p>
       <router-link class="linknav" to="/">Home</router-link>
       <router-link class="linknav" to="/about">About</router-link>
     </ul>
@@ -33,6 +33,8 @@
   margin: 8px;
 }
 .linknav:hover {
-  color: lightslategray;
+  color: lightgray;
+  text-decoration: underline;
+  font-weight: bold;
 }
 </style>
