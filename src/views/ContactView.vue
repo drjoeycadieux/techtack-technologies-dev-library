@@ -1,5 +1,4 @@
 <script setup>
-// import Alerts from "../components/Alerts.vue";
 import AlertContact from "../components/AlertContact.vue";
 import Navbar from "../components/Navbar.vue";
 import FooterModule from "../components/FooterModule.vue";
@@ -8,7 +7,6 @@ import Heading from "../components/Heading.vue";
 
 <template>
   <div>
-    <!-- <Alerts /> -->
     <AlertContact />
     <Navbar />
     <Heading />
