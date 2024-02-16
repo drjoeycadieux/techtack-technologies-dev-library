@@ -1,10 +1,12 @@
 <script setup>
+import Alerts from "../components/Alerts.vue";
 import Navbar from "../components/Navbar.vue";
 import FooterModule from "../components/FooterModule.vue";
 </script>
 
 <template>
   <div>
+  <Alerts/>
     <Navbar />
     <div class="about-content">
       <p>

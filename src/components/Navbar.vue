@@ -6,6 +6,7 @@
       <p class="title">Techtack-Technoogies Dev Library</p>
       <router-link class="linknav" to="/">Home</router-link>
       <router-link class="linknav" to="/about">About</router-link>
+      <router-link class="linknav" to="/contact">Contact</router-link>
     </ul>
   </div>
 </template>
@@ -33,8 +34,9 @@
   margin: 8px;
 }
 .linknav:hover {
-  color: lightgray;
-  text-decoration: underline;
-  font-weight: bold;
+  background-color: lightgray;
+  opacity: 1.5;
+  padding: 6px;
+  border-radius: 5px;
 }
 </style>
