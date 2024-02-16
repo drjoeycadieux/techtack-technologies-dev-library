@@ -4,7 +4,7 @@
   <div>
     <div class="alerts">
       <p>
-        <span><i style="font-size: 22px" class="bi bi-info-circle"></i></span>
+        <i class="bi bi-info-circle"></i>
         Our Webpage is our source of information in tech.
       </p>
     </div>
@@ -13,7 +13,7 @@
 
 <style>
 .alerts {
-  padding: 10px;
+  padding: 5px;
   background-color: #1f498c;
 }
 
