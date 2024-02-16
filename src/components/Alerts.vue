@@ -14,7 +14,7 @@
 <style>
 .alerts {
   padding: 10px;
-  background-color: #1595e3;
+  background-color: #1f498c;
 }
 
 .alerts p {
