@@ -3,7 +3,8 @@
 <template>
   <div>
     <div class="header">
-      <p>Powerfull Code in platform...</p>
+      <p>Open Source Platform ...</p>
+      <span>Our Dev Intelligence.</span>
     </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 .header {
   padding: 125px;
   background-color: #285797;
+  text-align: center;
 }
 
 .header p {
@@ -19,5 +21,10 @@
   text-align: center;
   color: white;
   font-size: 5rem;
+}
+span {
+  font-family: sans-serif;
+  font-size: 3rem;
+  color: white;
 }
 </style>
