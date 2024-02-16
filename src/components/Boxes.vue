@@ -22,11 +22,23 @@
           </h2>
         </div>
       </div>
+      <div class="footer">
+        <p>&copy; Techtack-Technologies Dev Library. Privacy | Terms</p>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+.footer {
+  padding-top: 125px;
+}
+
+.footer p {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
 .text {
   padding: 15px;
   color: white;
