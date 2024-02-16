@@ -1,14 +1,16 @@
 <script setup>
 import Navbar from "../components/Navbar.vue";
 import Boxes from "../components/Boxes.vue";
-import Alerts from "../components/Alerts.vue";
+// import Alerts from "../components/Alerts.vue";
 import FooterModule from "../components/FooterModule.vue";
+import Header from "../components/Header.vue";
 </script>
 
 <template>
   <div>
-    <Alerts />
+    <!-- <Alerts /> -->
     <Navbar />
+    <Header />
     <div>
       <div class="container">
         <div class="text-container">

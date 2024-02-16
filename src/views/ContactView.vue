@@ -2,12 +2,14 @@
 import Alerts from "../components/Alerts.vue";
 import Navbar from "../components/Navbar.vue";
 import FooterModule from "../components/FooterModule.vue";
+import Heading from "../components/Heading.vue";
 </script>
 
 <template>
   <div>
     <Alerts />
     <Navbar />
+    <Heading />
     <div class="contact-form">
       <form id="formData">
         <p>Contact Us</p>
