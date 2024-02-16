@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <div class="alerts">
+    <div class="alert-contact">
       <p>
         <i class="bi bi-info-circle"></i>
         Please use this
@@ -18,12 +18,12 @@
 </template>
 
 <style>
-.alerts {
+.alert-contact {
   padding: 5px;
   background-color: firebrick;
 }
 
-.alerts p {
+.alert-contact p {
   color: white;
   font-family: sans-serif;
   text-align: center;
