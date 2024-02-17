@@ -9,8 +9,8 @@ import FooterModule from "../components/FooterModule.vue";
   <Alerts/>
     <Navbar />
     <div class="about-content">
+      <h1>General</h1>
       <p>
-        <span>General</span>
         <div class="inner"></div>
         <h5>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptas officiis, harum ducimus impedit cumque architecto recusandae animi adipisci ratione, in nobis laudantium incidunt vitae, magni quia pariatur! Fuga, obcaecati!
@@ -39,5 +39,11 @@ import FooterModule from "../components/FooterModule.vue";
   font-family: sans-serif;
   font-size: 26px;
   color: #2d3748;
+}
+
+.about-content h1 {
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 </style>
