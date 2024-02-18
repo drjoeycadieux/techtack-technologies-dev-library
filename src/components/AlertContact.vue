@@ -20,7 +20,7 @@
 <style>
 .alert-contact {
   padding: 5px;
-  background-color: firebrick;
+  background-color: orange;
 }
 
 .alert-contact p {
