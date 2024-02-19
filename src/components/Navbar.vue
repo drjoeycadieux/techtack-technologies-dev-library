@@ -3,7 +3,7 @@
 <template>
   <div class="navbar-menu">
     <ul>
-      <p class="title">Techtack-Technoogies Dev Library</p>
+      <p class="title">Techtack-Technoogies Developers</p>
       <router-link class="linknav" to="/">Home</router-link>
       <router-link class="linknav" to="/about">About</router-link>
       <router-link class="linknav" to="/contact">Contact</router-link>

@@ -9,7 +9,7 @@
         <a
           class="linkmail"
           href="mailto:joeycadieux161@gmail.com, joey@tech-center.com"
-          >Contact Us</a
+          >Link</a
         >
         to contact us for any question or comments.
       </p>

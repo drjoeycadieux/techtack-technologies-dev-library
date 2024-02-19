@@ -12,8 +12,9 @@ export default {
   <div>
     <div class="footer">
       <p>
-        &copy; Copytight 2020 - {{ currentYear }} TeamLitho Company. All Right
-        Reserved. <a href="#">Terms of Services</a> | <a href="#">Privacy</a>
+        &copy; Copytight 2020 - {{ currentYear }} Powered By TeamLitho. All
+        Right Reserved. <a href="#">Terms of Services</a> |
+        <a href="#">Privacy</a>
       </p>
     </div>
   </div>
