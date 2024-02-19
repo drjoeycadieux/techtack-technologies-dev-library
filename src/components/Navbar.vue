@@ -14,21 +14,22 @@
 <style>
 .navbar-menu {
   padding: 25px;
-  background-color: #32394e;
+  /* background-color: #32394e; */
+  background-color: white;
 }
 .title {
   display: inline;
   margin: 8px;
   font-family: sans-serif;
   font-weight: bold;
-  color: white;
+  color: black;
   font-size: 26px;
 }
 .navbar-menu ul {
   display: block;
 }
 .linknav {
-  color: white;
+  color: black;
   text-decoration: none;
   font-family: sans-serif;
   margin: 8px;
@@ -36,7 +37,7 @@
 .linknav:hover {
   background-color: lightgray;
   opacity: 1.5;
-  padding: 6px;
+  padding: 1rem;
   border-radius: 5px;
 }
 </style>
