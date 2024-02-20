@@ -12,14 +12,15 @@
 <style>
 .header {
   padding: 125px;
-  background-color: #285797;
+  /* background-color: #285797; */
+  background-color: white;
   text-align: center;
 }
 
 .header p {
   font-family: sans-serif;
   text-align: center;
-  color: white;
+  color: black;
   font-size: 5rem;
 }
 span {
