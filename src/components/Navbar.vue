@@ -13,7 +13,7 @@
 
 <style>
 .navbar-menu {
-  padding: 25px;
+  padding: 10px;
   /* background-color: #32394e; */
   background-color: white;
 }
@@ -23,15 +23,16 @@
   font-family: sans-serif;
   font-weight: bold;
   color: black;
-  font-size: 26px;
+  font-size: 30px;
 }
 .navbar-menu ul {
   display: block;
 }
 .linknav {
-  color: black;
+  color: #32394e;
   text-decoration: none;
   font-family: sans-serif;
+  font-weight: bold;
   margin: 8px;
 }
 .linknav:hover {
