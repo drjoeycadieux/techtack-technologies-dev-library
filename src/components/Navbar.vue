@@ -15,6 +15,7 @@
 .navbar-menu {
   padding: 10px;
   /* background-color: #32394e; */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 .title {
