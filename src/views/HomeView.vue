@@ -4,6 +4,7 @@ import Boxes from "../components/Boxes.vue";
 // import Alerts from "../components/Alerts.vue";
 import FooterModule from "../components/FooterModule.vue";
 import Header from "../components/Header.vue";
+import Cards from "../components/Cards.vue";
 </script>
 
 <template>
@@ -18,6 +19,9 @@ import Header from "../components/Header.vue";
         </div>
         <br />
         <hr />
+        <br />
+        <Cards />
+        <br />
       </div>
       <div class="flexbox-container">
         <div class="boxes1">
