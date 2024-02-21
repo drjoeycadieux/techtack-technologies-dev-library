@@ -6,20 +6,38 @@ import FooterModule from "../components/FooterModule.vue";
 
 <template>
   <div>
-  <Alerts/>
+    <Alerts />
     <Navbar />
-    <div class="about-content">
-      <h1>General</h1>
+    <div class="about">
+      <h1>About Us</h1>
+      <p>Welcome to our website! Here's some information about us.</p>
+
+      <h2>Our Mission</h2>
       <p>
-        <div class="inner"></div>
-        <h5>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptas officiis, harum ducimus impedit cumque architecto recusandae animi adipisci ratione, in nobis laudantium incidunt vitae, magni quia pariatur! Fuga, obcaecati!
-        </h5>
+        Our mission is to provide valuable information and resources to our
+        community.
       </p>
+
+      <h2>Team</h2>
+      <ul>
+        <li v-for="member in teamMembers" :key="member.id">
+          {{ member.name }} - {{ member.role }}
+        </li>
+      </ul>
     </div>
     <FooterModule />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      teamMembers: [{ id: 1, name: "Joey Cadieux", role: "Developer" }],
+    };
+  },
+};
+</script>
 
 <style>
 .inner {
@@ -28,22 +46,28 @@ import FooterModule from "../components/FooterModule.vue";
   width: 400px;
   margin: auto;
 }
-.about-content {
-  padding: 15px;
-  padding-top: 125px;
-  text-align: center;
+.about {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
 
-.about-content p {
-  font-weight: bold;
+h1,
+h2 {
+  color: #333;
   font-family: sans-serif;
-  font-size: 26px;
-  color: #2d3748;
+}
+p {
+  font-family: sans-serif;
 }
 
-.about-content h1 {
-  color: black;
+li {
   font-family: sans-serif;
   font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 </style>
