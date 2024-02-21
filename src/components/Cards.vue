@@ -49,6 +49,10 @@ export default {
   font-family: sans-serif;
 }
 
+.card:hover {
+  background-color: lightblue;
+}
+
 .card-header {
   font-size: 1.2em;
   font-weight: bold;
