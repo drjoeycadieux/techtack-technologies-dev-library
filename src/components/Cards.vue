@@ -41,7 +41,7 @@ export default {
 
 .card {
   width: 30%;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 20px;
