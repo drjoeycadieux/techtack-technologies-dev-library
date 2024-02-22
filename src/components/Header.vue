@@ -12,8 +12,8 @@
 <style>
 .header {
   padding: 125px;
-  /* background-color: #285797; */
-  background-color: white;
+  background-color: #285797;
+  /* background-color: white; */
   text-align: center;
 }
 
