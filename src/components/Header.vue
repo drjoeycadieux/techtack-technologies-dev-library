@@ -3,7 +3,7 @@
 <template>
   <div>
     <div class="header">
-      <p>Open Source Platform ...</p>
+      <p>Open Source Project ...</p>
       <span>Our Dev Intelligence.</span>
     </div>
   </div>
