@@ -7,19 +7,35 @@
         <h1>Our Software Development</h1>
         <hr />
         <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          deleniti consequuntur inventore odit. Soluta culpa fuga autem
-          molestias voluptatum illum, ipsa molestiae, quas ut quod hic, vero
-          cupiditate saepe et?
-        </p>
         <div class="text">
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            laborum dignissimos minus labore magni, perspiciatis praesentium
-            iste quisquam ullam dolorem cum nesciunt sit obcaecati, non a
-            deleniti aut? Quam, perferendis.
-          </h2>
+          <img
+            style="border-radius: 10px"
+            class="img-responsive"
+            src="../assets/dev-assets/host1.png"
+            alt=""
+            width="304"
+            height="236"
+          />
+        </div>
+        <div class="text">
+          <img
+            style="border-radius: 10px"
+            class="img-responsive"
+            src="../assets/dev-assets/host2.png"
+            alt=""
+            width="304"
+            height="236"
+          />
+        </div>
+        <div class="text">
+          <img
+            style="border-radius: 10px"
+            class="img-responsive"
+            src="../assets/host3.png"
+            alt=""
+            width="304"
+            height="236"
+          />
         </div>
       </div>
     </div>
@@ -33,6 +49,7 @@
   font-family: sans-serif;
   width: 900px;
   margin: auto;
+  display: inline;
 }
 .boxes-container {
   padding: 45px;
@@ -47,6 +64,7 @@
   color: white;
   width: 900px;
   margin: auto;
+  display: inline;
 }
 
 .flex-boxes h1 {
