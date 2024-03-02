@@ -12,11 +12,8 @@ import FooterModule from "../components/FooterModule.vue";
       <h1>About Us</h1>
       <p>Welcome to our website! Here's some information about us.</p>
 
-      <h2>Our Mission</h2>
-      <p>
-        Our mission is to provide valuable information and resources to our
-        community.
-      </p>
+      <h2>Our Api</h2>
+      <p>Visit https://github.com/drjoeycadieux/techtack-technologies-api</p>
 
       <h2>Team</h2>
       <ul>
