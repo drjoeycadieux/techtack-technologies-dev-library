@@ -13,7 +13,14 @@ import FooterModule from "../components/FooterModule.vue";
       <p>Welcome to our website! Here's some information about us.</p>
 
       <h2>Our Api</h2>
-      <p>Visit https://github.com/drjoeycadieux/techtack-technologies-api</p>
+      <p>
+        Visit
+        <a
+          style="color: black; font-weight: bold"
+          href="https://github.com/drjoeycadieux/techtack-technologies-api"
+          >Visit Github for our api</a
+        >
+      </p>
 
       <h2>Team</h2>
       <ul>
