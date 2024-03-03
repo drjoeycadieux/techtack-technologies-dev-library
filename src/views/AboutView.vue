@@ -18,7 +18,7 @@ import FooterModule from "../components/FooterModule.vue";
         <a
           style="color: black; font-weight: bold"
           href="https://github.com/drjoeycadieux/techtack-technologies-api"
-          >Visit Github for our api</a
+          >Github for our api</a
         >
       </p>
 
