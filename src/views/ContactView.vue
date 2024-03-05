@@ -16,7 +16,7 @@ export default {
       // Initialize Supabase client with your Supabase URL and API key
       const supabaseUrl = "https://axjbsqfusfjcefwpehcc.supabase.co";
       const supabaseKey =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amJzcWZ1c2ZqY2Vmd3BlaGNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2NTgyMDQsImV4cCI6MjAyNTIzNDIwNH0.qVkyJFKudOz3B4lhW4ntoH-d6tq-ZLduublCcuatuSk";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amJzcWZ1c2ZqY2Vmd3BlaGNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2NTgyMDQsImV4cCI6MjAyNTIzNDIwNH0.qVkyJFKudOz3B4lhW4ntoH-d6tq-ZLduublCcuatuSk"; // Replace with your actual API key
       const supabase = createClient(supabaseUrl, supabaseKey);
 
       // Send form data to Supabase
@@ -34,7 +34,7 @@ export default {
           ]);
 
         if (error) {
-          console.error("Error inserting data:", error);
+          console.error("Error inserting data:", error.message);
         } else {
           console.log("Data inserted successfully:", data);
           // Optionally, you can reset the form after successful submission
@@ -75,7 +75,7 @@ export default {
           />
         </div>
         <div>
-          <input v-model="email" type="text" placeholder="Email" required />
+          <input v-model="email" type="email" placeholder="Email" required />
           <input
             v-model="website"
             type="text"
@@ -138,7 +138,7 @@ textarea:focus {
 
 input[type="text"],
 [type="text"],
-[type="text"],
+[type="email"],
 [type="website"] {
   width: 300px;
   padding: 12px 20px;
