@@ -1,4 +1,6 @@
 <script>
+import Navbar from "../components/Navbar.vue";
+
 import { createClient } from "@supabase/supabase-js";
 
 export default {
@@ -12,8 +14,8 @@ export default {
   },
   created() {
     this.supabase = createClient(
-      "https://zfiuflvqtnvrjerianka.supabase.co",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpmaXVmbHZxdG52cmplcmlhbmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2NzkwMDksImV4cCI6MjAyNTI1NTAwOX0.a_Ysc4W54bXlh-Fd86L0tzNRnPsq_pa_i9GJeazy74A",
+      "https://fatwsfvfwsnpomvxpeoq.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhdHdzZnZmd3NucG9tdnhwZW9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk3NDkyODYsImV4cCI6MjAyNTMyNTI4Nn0.k1vzT6m-c2RRliZER_RH6i1JQLz1ufTFFia1sM1hRvg",
     );
   },
   methods: {
@@ -43,44 +45,22 @@ export default {
 </script>
 
 <template>
-  <form @submit.prevent="submitForm" id="contactForm">
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input
-        v-model="name"
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Enter your name"
-        required
-      />
+  <div>
+    <Navbar />
+    <div>
+      <form @submit.prevent="submitForm" id="contactForm">
+        <h2>Contact Us</h2>
+        <input v-model="name" type="text" name="name" placeholder="Name" />
+        <input v-model="email" type="email" name="email" placeholder="Email" />
+        <textarea
+          v-model="message"
+          name="message"
+          placeholder="Message"
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input
-        v-model="email"
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Enter your email"
-        required
-      />
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea
-        v-model="message"
-        name="message"
-        id="message"
-        placeholder="Enter your message"
-        required
-      ></textarea>
-    </div>
-
-    <button type="submit">Submit</button>
-  </form>
+  </div>
 </template>
 
 <style scoped>
