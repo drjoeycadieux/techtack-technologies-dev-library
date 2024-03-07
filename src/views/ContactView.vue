@@ -4,166 +4,121 @@ import { createClient } from "@supabase/supabase-js";
 export default {
   data() {
     return {
-      firstName: "",
-      lastName: "",
+      supabase: null,
+      name: "",
       email: "",
-      website: "",
       message: "",
     };
   },
+  created() {
+    this.supabase = createClient(
+      "https://zfiuflvqtnvrjerianka.supabase.co",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpmaXVmbHZxdG52cmplcmlhbmthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2NzkwMDksImV4cCI6MjAyNTI1NTAwOX0.a_Ysc4W54bXlh-Fd86L0tzNRnPsq_pa_i9GJeazy74A",
+    );
+  },
   methods: {
     async submitForm() {
-      // Initialize Supabase client with your Supabase URL and API key
-      const supabaseUrl = "https://axjbsqfusfjcefwpehcc.supabase.co";
-      const supabaseKey =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF4amJzcWZ1c2ZqY2Vmd3BlaGNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk2NTgyMDQsImV4cCI6MjAyNTIzNDIwNH0.qVkyJFKudOz3B4lhW4ntoH-d6tq-ZLduublCcuatuSk"; // Replace with your actual API key
-      const supabase = createClient(supabaseUrl, supabaseKey);
+      const submission = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      };
 
-      // Send form data to Supabase
-      try {
-        const { data, error } = await supabase
-          .from("contacts") // Replace 'contacts' with your Supabase table name
-          .insert([
-            {
-              first_name: this.firstName,
-              last_name: this.lastName,
-              email: this.email,
-              website: this.website,
-              message: this.message,
-            },
-          ]);
+      const { error } = await this.supabase
+        .from("contacts")
+        .insert([submission], { returning: "minimal" });
 
-        if (error) {
-          console.error("Error inserting data:", error.message);
-        } else {
-          console.log("Data inserted successfully:", data);
-          // Optionally, you can reset the form after successful submission
-          this.resetForm();
-        }
-      } catch (error) {
-        console.error("Error connecting to Supabase:", error);
+      if (error) {
+        alert("There was an error, please try again.");
+      } else {
+        alert("Thanks for contacting us.");
+        // Clear form inputs after successful submission
+        this.name = "";
+        this.email = "";
+        this.message = "";
       }
-    },
-    resetForm() {
-      this.firstName = "";
-      this.lastName = "";
-      this.email = "";
-      this.website = "";
-      this.message = "";
     },
   },
 };
 </script>
 
 <template>
-  <div>
-    <div class="contact-form">
-      <form id="formData" @submit.prevent="submitForm">
-        <p>Contact Us</p>
-        <div>
-          <input
-            v-model="firstName"
-            type="text"
-            placeholder="First Name"
-            required
-          />
-          <input
-            v-model="lastName"
-            type="text"
-            placeholder="Last Name"
-            required
-          />
-        </div>
-        <div>
-          <input v-model="email" type="email" placeholder="Email" required />
-          <input
-            v-model="website"
-            type="text"
-            placeholder="Website (optional)"
-          />
-        </div>
-        <div>
-          <textarea v-model="message" cols="30" rows="10" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send</button>
-      </form>
+  <form @submit.prevent="submitForm" id="contactForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        v-model="name"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter your name"
+        required
+      />
     </div>
-  </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        v-model="email"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea
+        v-model="message"
+        name="message"
+        id="message"
+        placeholder="Enter your message"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
 </template>
 
-<style>
-/* Apply styles to all textareas */
-textarea {
-  width: 900px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-sizing: border-box; /* Ensure padding and border are included in the total width/height */
+<style scoped>
+#contactForm {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  /* Border and Box Shadow */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-
-  /* Font and Text Styles */
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #333;
-
-  /* Resize behavior */
-  resize: vertical; /* Allow vertical resizing */
-
-  /* Transition for smooth effects (optional) */
-  transition:
-    border-color 0.3s,
-    box-shadow 0.3s;
+  margin-top: 5px;
 }
 
-/* Change styles on focus */
-textarea:focus {
-  border-color: #007bff; /* Border color on focus */
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Box shadow on focus */
-}
-
-.contact-form {
-  padding: 25px;
-  text-align: center;
-}
-
-.contact-form p {
-  font-weight: bold;
-  font-family: sans-serif;
-  font-size: 29px;
-}
-
-input[type="text"],
-[type="text"],
-[type="email"],
-[type="website"] {
-  width: 300px;
-  padding: 12px 20px;
-  margin: 5px;
-  display: inline-block;
-  height: 50px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-.btn {
-  /* background-color: white; */
-  background-color: dodgerblue;
+button {
+  background-color: #4caf50;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 10px;
-  width: 125px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 5px;
-}
-
-.btn:hover {
+  border-radius: 4px;
   cursor: pointer;
-  background-color: blue;
 }
 </style>
